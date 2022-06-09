@@ -11,6 +11,13 @@ class Vector3d {
         float z;
 
     public:
+
+        Vector3d(float x, float y, float z) {
+            this->x = x;
+            this->y = y;
+            this->z = z;
+        }
+
         void operator-=(const Vector3d& v);
         void operator+=(const Vector3d& v);
         void operator*=(const Vector3d& v);
@@ -59,15 +66,13 @@ void Vector3d::print()
 
 int main() {
 
-    Vector3d vec1;
-    Vector3d vec2;
-
-    Vector3d result;
+    Vector3d vec1(1, 2, 3);
+    Vector3d vec2(2, 3, 4);
 
     vec1 += vec2;
     vec1 *= vec2;
     vec1 /= vec2;
     vec1 -= vec2;
-
-    result.print();
+    
+    vec1.print();
 }
